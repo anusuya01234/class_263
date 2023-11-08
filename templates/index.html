@@ -1,0 +1,35 @@
+<html>
+<head>
+<style>
+
+    body {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 25px;
+    }
+
+    h1 {
+        color: red;
+    }
+
+    iframe {
+        width:100%;
+        height: 65%;
+        border:0px;
+    }
+</style>
+</head>
+
+
+<body>
+    <h1>Covid Stats!</h1><br>
+    <form method="POST"> <!--In the form tag we are defining a method as POST which will call Python code with the click of the submit button.-->
+        <label >Enter a Country Name</label><br><br>
+        <input placeholder="Country Name" name="text"> <!--give a name to the input field so that from Python code we can identify this input field.-->
+        <input type="submit"> <!--defining an input tag with type submit which will act as a button and take the value from the form to our Python code.-->
+    </form>
+    <iframe src="{{ image }}"></iframe> <!-- {{image}} will display an image of the covid report from flask API.-->
+
+    <p>You have {{ count }} Visitors.</p> <!--The {{count}} will display visitors count from the count.txt file-->
+</body>
+</html>
